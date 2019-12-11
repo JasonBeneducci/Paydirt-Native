@@ -10,15 +10,12 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Paydirt Picks</Text>
         <Image style={styles.mainImage} source={require('./images/main-logo.png')}/>
-        <Text style={styles.description}>NFL Pickem Application</Text>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.navComponent} onPress={() => alert("You should be going to make picks.")}><Text style={styles.button}>Make Picks</Text></TouchableOpacity>
-          <TouchableOpacity style={styles.navComponent} onPress={() => alert("You should be going to the leaderboards.")}><Text style={styles.button}>Leaderboards</Text></TouchableOpacity>
-          <TouchableOpacity style={styles.navComponent} onPress={() => alert("You should be going to the about section")}><Text style={styles.button}>About</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.navItem} onPress={() => alert("You should be going to make picks.")}><Text style={styles.navItemText}>Make Picks</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.navItem} onPress={() => alert("You should be going to the leaderboards.")}><Text style={styles.navItemText}>Leaderboards</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.navItem} onPress={() => alert("You should be going to the about section")}><Text style={styles.navItemText}>About</Text></TouchableOpacity>
         </View>
-        {/* <Text style={styles.description}>{description}</Text> */}
       </View>
     );
   }
@@ -30,16 +27,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  welcome: {
-    position: 'absolute',
-    top: 80,
-    fontFamily: 'Cochin',
-    backgroundColor: 'navy',
-    fontSize: 60,
-    textAlign: 'center',
-    margin: 4,
-    color: 'red'
-  },
+  // welcome: {
+  //   position: 'absolute',
+  //   top: 80,
+  //   fontFamily: 'Cochin',
+  //   // backgroundColor: 'rgb(23,57,102)',
+  //   borderStyle: 'solid',
+  //   borderRadius: 10,
+  //   fontSize: 60,
+  //   textAlign: 'center',
+  //   margin: 4,
+  //   color: 'red'
+  // },
   description: {
     fontFamily: 'Cochin',
     textAlign: 'center',
@@ -47,30 +46,35 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   mainImage: {
-    // resizeMode: 'stretch',
+    position: 'absolute',
+    top: 100,
     height: 290,
     width: 320,
     backgroundColor: 'white',
   },
   buttonContainer: {
     position: 'absolute',
-    bottom: 20,
+    bottom: 50,
+    display: 'flex',
+    flexDirection: 'column',
     color: 'white',
     width: '100%',
-    marginBottom: 0,
-    alignItems: 'stretch',
-    backgroundColor: 'red',
+    // alignItems: 'stretch',
+    // backgroundColor: 'red',
   },
-  navComponent: {
+  navItem: {
+    margin: 7,
     borderStyle: 'solid',
-    borderColor: 'navy',
-    borderWidth: 10,
+    backgroundColor: 'rgb(23,57,102)',
+    borderWidth: 2,
+    borderRadius: 5,
   },
-  button: {
+  navItemText: {
+    margin: 7,
     fontSize: 40,
-    color: 'blue',
+    color: 'white',
     textAlign: 'center',
-    backgroundColor: 'red'
+    backgroundColor: 'red',
   }
 });
 
