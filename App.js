@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Button} from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 
 // const description = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -14,9 +14,9 @@ export default class App extends Component {
         <Image style={styles.mainImage} source={require('./images/main-logo.png')}/>
         <Text style={styles.description}>NFL Pickem Application</Text>
         <View style={styles.buttonContainer}>
-          <Button style={styles.button} onPress={() => alert("You tapped the first button!")} title="Press Me!"></Button>
-          <Button style={styles.button} onPress={() => alert("You tapped the second button!")} title="Press Me!"></Button>
-          <Button style={styles.button} onPress={() => alert("You tapped the third button!")} title="Press Me!"></Button>
+          <TouchableOpacity style={styles.navComponent} onPress={() => alert("You should be going to make picks.")}><Text style={styles.button}>Make Picks</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.navComponent} onPress={() => alert("You should be going to the leaderboards.")}><Text style={styles.button}>Leaderboards</Text></TouchableOpacity>
+          <TouchableOpacity style={styles.navComponent} onPress={() => alert("You should be going to the about section")}><Text style={styles.button}>About</Text></TouchableOpacity>
         </View>
         {/* <Text style={styles.description}>{description}</Text> */}
       </View>
@@ -29,32 +29,48 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'navy',
   },
   welcome: {
+    position: 'absolute',
+    top: 80,
+    fontFamily: 'Cochin',
+    backgroundColor: 'navy',
     fontSize: 60,
     textAlign: 'center',
     margin: 4,
     color: 'red'
   },
-  // description: {
-  //   textAlign: 'center',
-  //   color: 'white',
-  //   marginBottom: 5,
-  // },
+  description: {
+    fontFamily: 'Cochin',
+    textAlign: 'center',
+    color: 'black',
+    marginBottom: 5,
+  },
   mainImage: {
+    // resizeMode: 'stretch',
+    height: 290,
+    width: 320,
     backgroundColor: 'white',
-    borderRadius: 10
   },
   buttonContainer: {
+    position: 'absolute',
+    bottom: 20,
+    color: 'white',
     width: '100%',
     marginBottom: 0,
     alignItems: 'stretch',
-    backgroundColor: 'white',
+    backgroundColor: 'red',
+  },
+  navComponent: {
+    borderStyle: 'solid',
+    borderColor: 'navy',
+    borderWidth: 10,
   },
   button: {
-    height: 20,
-    width: 20
+    fontSize: 40,
+    color: 'blue',
+    textAlign: 'center',
+    backgroundColor: 'red'
   }
 });
 
