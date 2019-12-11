@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
-
-// const description = Platform.select({
-//   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-//   android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
-// });
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 
 export default class App extends Component {
   render() {
@@ -27,18 +22,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  // welcome: {
-  //   position: 'absolute',
-  //   top: 80,
-  //   fontFamily: 'Cochin',
-  //   // backgroundColor: 'rgb(23,57,102)',
-  //   borderStyle: 'solid',
-  //   borderRadius: 10,
-  //   fontSize: 60,
-  //   textAlign: 'center',
-  //   margin: 4,
-  //   color: 'red'
-  // },
   description: {
     fontFamily: 'Cochin',
     textAlign: 'center',
@@ -59,8 +42,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     color: 'white',
     width: '100%',
-    // alignItems: 'stretch',
-    // backgroundColor: 'red',
   },
   navItem: {
     margin: 7,
