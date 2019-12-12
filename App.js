@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
   navItemText: {
     margin: 7,
-    fontFamily: "AmericanTypewriter",
+    fontFamily: "Copperplate",
     fontWeight: 'bold',
     fontSize: 40,
     color: 'white',
