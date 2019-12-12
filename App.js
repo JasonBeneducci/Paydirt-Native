@@ -52,12 +52,12 @@ const styles = StyleSheet.create({
   },
   navItemText: {
     margin: 7,
-    fontFamily: "Cochin",
+    fontFamily: "AmericanTypewriter-Bold",
     fontWeight: 'bold',
     fontSize: 40,
     color: 'white',
     textAlign: 'center',
-    backgroundColor: 'rbg(178,37,29)',
+    backgroundColor: 'rgb(178,37,29)',
   }
 });
 
