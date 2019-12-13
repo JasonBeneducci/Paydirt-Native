@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image style={styles.mainImage} source={require('./images/main-logo.png')}/>
+        <Image style={styles.mainImage} source={require('./images/main-logo.png')} />
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.navItem} onPress={() => alert("You should be going to make picks.")}><Text style={styles.navItemText}>Make Picks</Text></TouchableOpacity>
           <TouchableOpacity style={styles.navItem} onPress={() => alert("You should be going to the leaderboards.")}><Text style={styles.navItemText}>Leaderboards</Text></TouchableOpacity>
@@ -60,5 +60,3 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(178,37,29)',
   }
 });
-
-
